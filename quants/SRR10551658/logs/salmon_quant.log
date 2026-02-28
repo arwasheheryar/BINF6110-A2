@@ -1,0 +1,50 @@
+[2026-02-28 01:23:15.041] [jointLog] [info] setting maxHashResizeThreads to 4
+[2026-02-28 01:23:15.041] [jointLog] [info] Fragment incompatibility prior below threshold.  Incompatible fragments will be ignored.
+[2026-02-28 01:23:15.041] [jointLog] [info] Usage of --validateMappings implies use of minScoreFraction. Since not explicitly specified, it is being set to 0.65
+[2026-02-28 01:23:15.041] [jointLog] [info] Setting consensusSlack to selective-alignment default of 0.35.
+[2026-02-28 01:23:15.041] [jointLog] [info] parsing read library format
+[2026-02-28 01:23:15.041] [jointLog] [info] There is 1 library.
+[2026-02-28 01:23:15.041] [jointLog] [info] Loading pufferfish index
+[2026-02-28 01:23:15.041] [jointLog] [info] Loading dense pufferfish index.
+[2026-02-28 01:23:15.137] [jointLog] [info] done
+[2026-02-28 01:23:15.201] [jointLog] [info] Index contained 6109 targets
+[2026-02-28 01:23:15.232] [jointLog] [info] Number of decoys : 17
+[2026-02-28 01:23:15.232] [jointLog] [info] First decoy index : 6092 
+[2026-02-28 01:23:15.233] [jointLog] [warning] Fragment GC bias correction is currently *experimental* in single-end libraries.  Please use this option with caution.
+[2026-02-28 01:23:15.313] [jointLog] [info] Automatically detected most likely library type as U
+
+[2026-02-28 01:23:21.228] [fileLog] [info] 
+At end of round 0
+==================
+Observed 6912070 total fragments (6912070 in most recent round)
+
+[2026-02-28 01:23:21.227] [jointLog] [info] Computed 6459 rich equivalence classes for further processing
+[2026-02-28 01:23:21.227] [jointLog] [info] Counted 5658692 total reads in the equivalence classes 
+[2026-02-28 01:23:21.232] [jointLog] [info] Number of mappings discarded because of alignment score : 409630
+[2026-02-28 01:23:21.232] [jointLog] [info] Number of fragments entirely discarded because of alignment score : 125144
+[2026-02-28 01:23:21.232] [jointLog] [info] Number of fragments discarded because they are best-mapped to decoys : 80683
+[2026-02-28 01:23:21.232] [jointLog] [info] Number of fragments discarded because they have only dovetail (discordant) mappings to valid targets : 0
+[2026-02-28 01:23:21.232] [jointLog] [info] Mapping rate = 81.8668%
+
+[2026-02-28 01:23:21.232] [jointLog] [info] finished quantifyLibrary()
+[2026-02-28 01:23:21.232] [jointLog] [info] Starting optimizer
+[2026-02-28 01:23:21.235] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2026-02-28 01:23:21.238] [jointLog] [info] iteration = 0 | max rel diff. = 10740.6
+[2026-02-28 01:23:21.258] [jointLog] [info] iteration 11, adjusting effective lengths to account for biases
+[2026-02-28 01:23:21.584] [jointLog] [info] Computed expected counts (for bias correction)
+[2026-02-28 01:23:21.584] [jointLog] [info] processed bias for 0.0% of the transcripts
+[2026-02-28 01:23:21.624] [jointLog] [info] processed bias for 10.0% of the transcripts
+[2026-02-28 01:23:21.656] [jointLog] [info] processed bias for 20.0% of the transcripts
+[2026-02-28 01:23:21.694] [jointLog] [info] processed bias for 30.0% of the transcripts
+[2026-02-28 01:23:21.726] [jointLog] [info] processed bias for 40.0% of the transcripts
+[2026-02-28 01:23:21.767] [jointLog] [info] processed bias for 50.0% of the transcripts
+[2026-02-28 01:23:21.807] [jointLog] [info] processed bias for 60.0% of the transcripts
+[2026-02-28 01:23:21.848] [jointLog] [info] processed bias for 70.0% of the transcripts
+[2026-02-28 01:23:21.892] [jointLog] [info] processed bias for 80.0% of the transcripts
+[2026-02-28 01:23:21.904] [jointLog] [info] processed bias for 90.0% of the transcripts
+[2026-02-28 01:23:21.936] [jointLog] [info] processed bias for 100.0% of the transcripts
+[2026-02-28 01:23:22.104] [jointLog] [info] iteration = 100 | max rel diff. = 0.0297646
+[2026-02-28 01:23:22.261] [jointLog] [info] iteration = 184 | max rel diff. = 0.00527024
+[2026-02-28 01:23:22.262] [jointLog] [info] Finished optimizer
+[2026-02-28 01:23:22.262] [jointLog] [info] writing output 
+

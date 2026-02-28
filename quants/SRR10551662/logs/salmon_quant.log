@@ -1,0 +1,51 @@
+[2026-02-28 01:22:43.138] [jointLog] [info] setting maxHashResizeThreads to 4
+[2026-02-28 01:22:43.138] [jointLog] [info] Fragment incompatibility prior below threshold.  Incompatible fragments will be ignored.
+[2026-02-28 01:22:43.138] [jointLog] [info] Usage of --validateMappings implies use of minScoreFraction. Since not explicitly specified, it is being set to 0.65
+[2026-02-28 01:22:43.138] [jointLog] [info] Setting consensusSlack to selective-alignment default of 0.35.
+[2026-02-28 01:22:43.138] [jointLog] [info] parsing read library format
+[2026-02-28 01:22:43.138] [jointLog] [info] There is 1 library.
+[2026-02-28 01:22:43.139] [jointLog] [info] Loading pufferfish index
+[2026-02-28 01:22:43.139] [jointLog] [info] Loading dense pufferfish index.
+[2026-02-28 01:22:43.244] [jointLog] [info] done
+[2026-02-28 01:22:43.343] [jointLog] [info] Index contained 6109 targets
+[2026-02-28 01:22:43.374] [jointLog] [info] Number of decoys : 17
+[2026-02-28 01:22:43.374] [jointLog] [info] First decoy index : 6092 
+[2026-02-28 01:22:43.375] [jointLog] [warning] Fragment GC bias correction is currently *experimental* in single-end libraries.  Please use this option with caution.
+[2026-02-28 01:22:43.459] [jointLog] [info] Automatically detected most likely library type as U
+
+[2026-02-28 01:22:49.090] [jointLog] [info] Computed 6458 rich equivalence classes for further processing
+[2026-02-28 01:22:49.090] [jointLog] [info] Counted 5808598 total reads in the equivalence classes 
+[2026-02-28 01:22:49.093] [jointLog] [info] Number of mappings discarded because of alignment score : 167777
+[2026-02-28 01:22:49.093] [jointLog] [info] Number of fragments entirely discarded because of alignment score : 51368
+[2026-02-28 01:22:49.093] [jointLog] [info] Number of fragments discarded because they are best-mapped to decoys : 32762
+[2026-02-28 01:22:49.093] [jointLog] [info] Number of fragments discarded because they have only dovetail (discordant) mappings to valid targets : 0
+[2026-02-28 01:22:49.093] [jointLog] [info] Mapping rate = 92.0642%
+
+[2026-02-28 01:22:49.093] [jointLog] [info] finished quantifyLibrary()
+[2026-02-28 01:22:49.094] [jointLog] [info] Starting optimizer
+[2026-02-28 01:22:49.103] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2026-02-28 01:22:49.105] [jointLog] [info] iteration = 0 | max rel diff. = 27041.4
+[2026-02-28 01:22:49.136] [jointLog] [info] iteration 11, adjusting effective lengths to account for biases
+[2026-02-28 01:22:49.090] [fileLog] [info] 
+At end of round 0
+==================
+Observed 6309292 total fragments (6309292 in most recent round)
+
+[2026-02-28 01:22:49.452] [jointLog] [info] Computed expected counts (for bias correction)
+[2026-02-28 01:22:49.452] [jointLog] [info] processed bias for 0.0% of the transcripts
+[2026-02-28 01:22:49.483] [jointLog] [info] processed bias for 10.0% of the transcripts
+[2026-02-28 01:22:49.511] [jointLog] [info] processed bias for 20.0% of the transcripts
+[2026-02-28 01:22:49.540] [jointLog] [info] processed bias for 30.0% of the transcripts
+[2026-02-28 01:22:49.569] [jointLog] [info] processed bias for 40.0% of the transcripts
+[2026-02-28 01:22:49.599] [jointLog] [info] processed bias for 50.0% of the transcripts
+[2026-02-28 01:22:49.627] [jointLog] [info] processed bias for 60.0% of the transcripts
+[2026-02-28 01:22:49.656] [jointLog] [info] processed bias for 70.0% of the transcripts
+[2026-02-28 01:22:49.676] [jointLog] [info] processed bias for 80.0% of the transcripts
+[2026-02-28 01:22:49.696] [jointLog] [info] processed bias for 90.0% of the transcripts
+[2026-02-28 01:22:49.725] [jointLog] [info] processed bias for 100.0% of the transcripts
+[2026-02-28 01:22:49.726] [jointLog] [info] processed bias for 100.0% of the transcripts
+[2026-02-28 01:22:49.890] [jointLog] [info] iteration = 100 | max rel diff. = 0.325811
+[2026-02-28 01:22:49.925] [jointLog] [info] iteration = 115 | max rel diff. = 0.00531386
+[2026-02-28 01:22:49.925] [jointLog] [info] Finished optimizer
+[2026-02-28 01:22:49.925] [jointLog] [info] writing output 
+
