@@ -179,15 +179,15 @@ p_volcano <- ggplot(res_df, aes(x = log2FoldChange,
     geom_hline(yintercept = -log10(0.05), linetype = "dashed", linewidth = 0.5) +
     labs(x     = "Log2 Fold Change (Mature vs Early Biofilm)",
          y     = "-Log10 p-value",
-         title = "Figure 2. Volcano Plot: Mature vs Early Biofilm",
+         title = "Figure 3. Volcano Plot: Mature vs Early Biofilm",
          color = "Expression") +
     theme_classic(base_size = 13)
 
-ggsave(here("results", "figures", "Fig2_Volcano.pdf"), p_volcano, width = 8, height = 6)
-ggsave(here("results", "figures", "Fig2_Volcano.png"), p_volcano, width = 8, height = 6, dpi = 300)
+ggsave(here("results", "figures", "Fig3_Volcano.pdf"), p_volcano, width = 8, height = 6)
+ggsave(here("results", "figures", "Fig3_Volcano.png"), p_volcano, width = 8, height = 6, dpi = 300)
 
 
-# ── Figure 3: Heatmap ────────────────────────────────────────────────
+# ── Figure 4: Heatmap ────────────────────────────────────────────────
 top40 <- resLFC_mature_vs_early %>%
     as.data.frame() %>%
     na.omit() %>%
@@ -219,15 +219,15 @@ p_heat <- pheatmap(
     show_rownames     = TRUE,
     fontsize_row      = 7,
     color             = colorRampPalette(c("#1565C0", "white", "#E53935"))(100),
-    main              = "Figure 3. Top 40 DE Genes: Mature vs Early Biofilm\n(row z-scores of VST-normalised counts)"
+    main              = "Figure 4. Top 40 DE Genes: Mature vs Early Biofilm\n(row z-scores of VST-normalised counts)"
 )
 
-ggsave(here("results", "figures", "Fig3_Heatmap.pdf"), p_heat, width = 9, height = 11)
-ggsave(here("results", "figures", "Fig3_Heatmap.png"), p_heat, width = 9, height = 11, dpi = 300)
+ggsave(here("results", "figures", "Fig4_Heatmap.pdf"), p_heat, width = 9, height = 11)
+ggsave(here("results", "figures", "Fig4_Heatmap.png"), p_heat, width = 9, height = 11, dpi = 300)
 
 
 # ── Figure 4: MA Plot ────────────────────────────────────────────────
-pdf(here("results", "figures", "Fig4_MA_plots.pdf"), width = 10, height = 5)
+pdf(here("results", "figures", "Fig2_MA_plots.pdf"), width = 10, height = 5)
 par(mfrow = c(1, 2))
 plotMA(res_mature_vs_early,
        ylim = c(-6, 6), main = "Before LFC Shrinkage", colSig = "red")
