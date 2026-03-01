@@ -234,3 +234,11 @@ plotMA(res_mature_vs_early,
 plotMA(resLFC_mature_vs_early,
        ylim = c(-6, 6), main = "After LFC Shrinkage (ashr)", colSig = "red")
 dev.off()
+# PNG version for README display
+png(here("results", "figures", "Fig2_MA_plots.png"), width = 1000, height = 500, res = 100)
+par(mfrow = c(1, 2))
+plotMA(res_mature_vs_early,
+       ylim = c(-6, 6), main = "Before LFC Shrinkage", colSig = "red")
+plotMA(resLFC_mature_vs_early,
+       ylim = c(-6, 6), main = "After LFC Shrinkage (ashr)", colSig = "red")
+dev.off()
