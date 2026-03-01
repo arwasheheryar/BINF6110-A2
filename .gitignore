@@ -1,0 +1,31 @@
+# Large reference files
+*.fna
+*.fa
+*.fasta
+gentrome.fna
+decoys.txt
+
+# Raw sequencing data (too large)
+raw_data/
+
+# Salmon index (too large)
+index/
+
+# SRA prefetch directories
+SRR*/
+
+# R session files
+.RData
+.Rhistory
+.Rproj.user/
+
+# Accidental R output
+Rplots.pdf
+
+# Compressed archives
+*.tar.gz
+*.gz
+*.zip
+
+# GTF annotation (downloadable, too large)
+*.gtf
