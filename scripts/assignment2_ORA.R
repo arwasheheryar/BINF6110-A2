@@ -113,7 +113,11 @@ if (!is.null(kegg_enrich) && nrow(as.data.frame(kegg_enrich)) > 0) {
 # FIGURE 5c — Up vs Downregulated GO terms compared
 # ════════════════════════════════════════════════════════════════════
 p_compare <- dotplot(compare_obj, showCategory = 15,
-                      title = "Figure 5c. GO BP: Up vs Downregulated Genes\nMature vs Early Biofilm")
+                      title = "Figure 5c. GO BP: Up vs Downregulated Genes\nMature vs Early Biofilm") +
+  theme(
+    axis.text.y = element_text(size = 8, lineheight = 0.9),
+    plot.margin = margin(t = 10, r = 10, b = 10, l = 60)
+  )
 
 ggsave(here("results", "figures", "Fig5c_GO_compare.pdf"), p_compare, width = 10, height = 9)
 ggsave(here("results", "figures", "Fig5c_GO_compare.png"), p_compare, width = 10, height = 9, dpi = 300)
