@@ -15,6 +15,7 @@ Transcript-level quantification was performed using Salmon v1.10.3 (Patro et al.
 Differential expression analysis was conducted in R using DESeq2 v1.50.2, which models count data with a negative binomial distribution and stabilizes gene-wise dispersion estimates through empirical Bayes shrinkage (Love et al., 2014). Alternative methods such as edgeR and limma-voom also perform well in benchmarking studies (Soneson & Delorenzi, 2013; Schurch et al., 2016), but key differences guided the choice of DESeq2. Although edgeR performs similarly with small replicate numbers, it has been reported to be less conservative for lowly expressed genes relative to DESeq2 (Love, 2016). Limma-voom performs optimally with larger sample sizes, whereas with three replicates per condition, DESeq2’s per-gene dispersion modeling provides more stable variance estimates (Law et al., 2014; Schurch et al., 2016). DESeq2 also integrates directly with tximport, allowing inferential uncertainty from Salmon transcript-level estimates to be propagated to gene-level counts (Soneson et al., 2015). Log2 fold changes were further stabilized using adaptive shrinkage (ashr), which reduces noise from low-count genes without imposing a fixed prior (Stephens, 2017).
 
 To interpret differential expression results functionally, over-representation analysis (ORA) was applied using clusterProfiler. While Gene Set Enrichment Analysis (GSEA) evaluates ranked gene lists and is sensitive to distributed pathway-level shifts (Subramanian et al., 2005), ORA directly tests whether a threshold-defined set of significant genes is enriched for specific GO or KEGG categories (Reimand et al., 2019). Although ORA is sensitive to threshold choice and assumes gene independence (Huang et al., 2009), the use of stringent DESeq2 filtering and separate analyses of up- and downregulated gene sets supports its interpretability and appropriateness for this dataset (Yu et al., 2012; Ziemann et al., 2024).
+
 This study reanalyzes publicly available RNA-seq data from Mardanov et al. (2020) to characterize transcriptional differences across three stages of yeast velum biofilm development: early, thin, and mature at 38, 83, and 109 days post-inoculation. Differential expression was performed with DESeq2, and GO biological process and KEGG pathway enrichment were assessed using ORA to identify biological functions associated with biofilm progression.
 
 
@@ -212,6 +213,14 @@ Bester, M. C., Pretorius, I. S., & Bauer, F. F. (2006). The regulation of Saccha
 
 DeRisi, J. L., Iyer, V. R., & Brown, P. O. (1997). Exploring the metabolic and genetic control of gene expression on a genomic scale. Science, 278(5338), 680–686.
 
+Dobin, A., Davis, C. A., Schlesinger, F., Drenkow, J., Zaleski, C., Jha, S., Batut, P., Chaisson, M., & Gingeras, T. R. (2013). STAR: Ultrafast universal RNA-seq aligner. Bioinformatics, 29(1), 15–21.
+
+Huang, D. W., Sherman, B. T., & Lempicki, R. A. (2009). Bioinformatics enrichment tools: Paths toward the comprehensive functional analysis of large gene lists. Nucleic Acids Research, 37(1), 1–13.
+
+Kim, D., Paggi, J. M., Park, C., Bennett, C., & Salzberg, S. L. (2019). Graph-based genome alignment and genotyping with HISAT2 and HISAT-genotype. Nature Biotechnology, 37, 907–915.
+
+Law, C. W., Chen, Y., Shi, W., & Smyth, G. K. (2014). voom: Precision weights unlock linear model analysis tools for RNA-seq read counts. Genome Biology, 15(2), R29.
+
 Love, M. I., Huber, W., & Anders, S. (2014). Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. Genome Biology, 15(12), 550.
 
 Nookaew, I., Papini, M., Pornputtapong, N., Scalcinati, G., & Nielsen, J. (2012). A comprehensive comparison of RNA-seq and microarray technologies for transcriptome analysis in Saccharomyces cerevisiae. BMC Genomics, 13, 621.
@@ -220,9 +229,15 @@ Patro, R., Duggal, G., Love, M. I., Irizarry, R. A., & Kingsford, C. (2017). Sal
 
 Reimand, J., Isserlin, R., Voisin, V., Kucera, M., Tannus-Lopes, C., Rostamianfar, A., Wadi, L., Meyer, M., Wong, J., Xu, C., Merico, D., & Bader, G. D. (2019). Pathway enrichment analysis and visualization of omics data using g:Profiler, GSEA, Cytoscape and EnrichmentMap. Nature Protocols, 14(2), 482–517. 
 
+Schurch, N. J., Schofield, P., Gierliński, M., Cole, C., Sherstnev, A., Singh, V., Wrobel, N., Gharbi, K., Simpson, G. G., Owen-Hughes, T., Blaxter, M., & Barton, G. J. (2016). How many biological replicates are needed in an RNA-seq experiment and which differential expression tool should you use? RNA, 22(6), 839–851.
+
 Soneson, C., Love, M. I., & Robinson, M. D. (2015). Differential analyses for RNA-seq: transcript-level estimates improve gene-level inferences. F1000Research, 4, 1521.
 
 Stephens, M. (2017). False discovery rates: a new deal. Biostatistics, 18(2), 275–294.
+
+Srivastava, A., Malik, L., Sarkar, H., Zakeri, M., Almodaresi, F., Soneson, C., Love, M. I., Kingsford, C., & Patro, R. (2020). Alignment and mapping methodology influence transcript abundance estimation. Genome Biology, 21(1), 239.
+
+Subramanian, A., Tamayo, P., Mootha, V. K., Mukherjee, S., Ebert, B. L., Gillette, M. A., Paulovich, A., Pomeroy, S. L., Golub, T. R., Lander, E. S., & Mesirov, J. P. (2005). Gene set enrichment analysis: A knowledge-based approach for interpreting genome-wide expression profiles. Proceedings of the National Academy of Sciences, 102(43), 15545–15550.
 
 Yang, Y., Guo, Z., & Wang, X. (2018). The regulatory network of Saccharomyces cerevisiae biofilm formation. Frontiers in Microbiology, 9, 1860.
 
